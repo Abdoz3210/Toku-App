@@ -1,0 +1,106 @@
+import 'package:flutter/material.dart';
+import 'package:toku_app/components/numberss_items.dart';
+import 'package:toku_app/models/numbers.dart';
+
+class NumberPage extends StatelessWidget {
+  const NumberPage({super.key});
+  final List<Number> number = const [
+    Number(
+      sound: 'sounds/numbers/number_one_sound.mp3',
+      image: 'assets/images/numbers/number_one.png',
+      enText: 'ichi',
+      jpText: 'one',
+    ),
+    Number(
+      sound: 'sounds/numbers/number_one_sound.mp3',
+      image: 'assets/images/numbers/number_two.png',
+      jpText: 'Ni',
+      enText: 'Two',
+    ),
+    Number(
+      sound: 'sounds/numbers/number_one_sound.mp3',
+      image: 'assets/images/numbers/number_three.png',
+      jpText: 'San',
+      enText: 'Three',
+    ),
+    Number(
+      sound: 'sounds/numbers/number_one_sound.mp3',
+      image: 'assets/images/numbers/number_four.png',
+      jpText: 'Shi',
+      enText: 'Four',
+    ),
+    Number(
+      sound: 'sounds/numbers/number_one_sound.mp3',
+
+      image: 'assets/images/numbers/number_five.png',
+      jpText: 'Go',
+      enText: 'Five',
+    ),
+    Number(
+      sound: 'sounds/numbers/number_one_sound.mp3',
+
+      image: 'assets/images/numbers/number_six.png',
+      jpText: 'Roku',
+      enText: 'Six',
+    ),
+    Number(
+      sound: 'sounds/numbers/number_one_sound.mp3',
+      image: 'assets/images/numbers/number_seven.png',
+      jpText: 'Sebun',
+      enText: 'Seven',
+    ),
+    Number(
+      sound: 'sounds/numbers/number_one_sound.mp3',
+      image: 'assets/images/numbers/number_eight.png',
+      jpText: 'hachi',
+      enText: 'eight',
+    ),
+    Number(
+      sound: 'sounds/numbers/number_one_sound.mp3',
+      image: 'assets/images/numbers/number_nine.png',
+      jpText: 'Kyū',
+      enText: 'Nine',
+    ),
+    Number(
+      sound: 'sounds/numbers/number_one_sound.mp3',
+      image: 'assets/images/numbers/number_ten.png',
+      jpText: 'jū',
+      enText: 'Ten',
+    ),
+  ];
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(
+          'Numbers',
+          style: TextStyle(color: Colors.white, fontSize: 20),
+        ),
+
+        backgroundColor: Color(0xff412A21),
+        foregroundColor: Colors.white,
+        leading: IconButton(
+          onPressed: () {
+            Navigator.pop(context);
+          },
+          icon: Icon(Icons.arrow_back_ios_new_outlined),
+        ),
+      ),
+      body: ListView.builder(
+        itemCount: number.length,
+        itemBuilder: (context, index) {
+          return NumberCategory(number: number[index]);
+        },
+      ),
+    );
+  }
+
+  // List<Widget> getList(List<Number> number) {
+  //   List<Widget> itemsList = [];
+  //   for (int i = 0; i < number.length; i++) {
+  //     itemsList.add(NumberCategory(number: number[i]));
+  //   }
+  //   return itemsList;
+  // }
+}
