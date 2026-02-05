@@ -23,3 +23,12 @@ class Number extends ItemsModel {
     required super.sound
   });
 }
+
+class ColorsModel extends ItemsModel {
+  const ColorsModel({
+    required super.jpText,
+    required super.enText,
+    required super.image,
+    required super.sound,
+  });
+}

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:toku_app/components/category_items.dart';
+import 'package:toku_app/screens/color_page.dart';
 import 'package:toku_app/screens/family_page.dart';
 import 'package:toku_app/screens/number_page.dart';
 
@@ -44,7 +45,20 @@ class HomePage extends StatelessWidget {
               );
             },
           ),
-          Category(text: 'Colors', colors: Color(0xff743699)),
+          Category(
+            text: 'Colors',
+            colors: Color(0xff743699),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) {
+                    return ColorPage();
+                  },
+                ),
+              );
+            },
+          ),
           Category(text: 'Phrases', colors: Color(0xff3998BD)),
         ],
       ),
