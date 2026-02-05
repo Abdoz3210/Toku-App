@@ -1,22 +1,22 @@
 import 'package:flutter/material.dart';
+import 'package:toku_app/models/family.dart';
 
 class FamilyCategory extends StatelessWidget {
-  const FamilyCategory({super.key});
+  const FamilyCategory({super.key, required this.member});
+  final FamilyMember? member;
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 65,
+      height: 100,
       color: Color(0xff416c20),
       child: Row(
         children: [
           Container(
-            height: 65,
-            width: 65,
+            height: 100,
+            width: 100,
             color: Color(0xfffdf0d8),
-            child: Image.asset(
-              "assets/images/family_members/family_father.png",
-            ),
+            child: Image.asset(member!.image!),
           ),
           Padding(
             padding: const EdgeInsets.only(left: 13),
@@ -25,11 +25,11 @@ class FamilyCategory extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  "Chichioya",
+                  member!.jpText!,
                   style: TextStyle(color: Colors.white, fontSize: 17),
                 ),
                 Text(
-                  "Father",
+                  member!.enText!,
                   style: TextStyle(color: Colors.white, fontSize: 15),
                 ),
               ],
@@ -44,6 +44,5 @@ class FamilyCategory extends StatelessWidget {
         ],
       ),
     );
-    ;
   }
 }

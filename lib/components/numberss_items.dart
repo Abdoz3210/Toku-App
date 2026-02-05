@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:toku_app/models/numbers.dart';
 
 class NumberCategory extends StatelessWidget {
-  NumberCategory({super.key, this.number});
-  Number? number;
+  const NumberCategory({super.key, this.number});
+  final Number? number;
 
   @override
   Widget build(BuildContext context) {
