@@ -1,10 +1,15 @@
+import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
 // import 'package:toku_app/models/family.dart';
 import 'package:toku_app/models/items.dart';
 // import 'package:toku_app/models/numbers.dart';
 
 class Categories extends StatelessWidget {
-  const Categories({super.key, required this.item,required this.backgroundColor});
+  const Categories({
+    super.key,
+    required this.item,
+    required this.backgroundColor,
+  });
   final ItemsModel? item;
   final Color? backgroundColor;
 
@@ -40,7 +45,10 @@ class Categories extends StatelessWidget {
           ),
           Spacer(flex: 10),
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              final player = AudioPlayer();
+              player.setSourceAsset(item!.sound!);
+            },
             icon: Icon(Icons.play_arrow_rounded, color: Colors.white),
           ),
           Spacer(flex: 1),

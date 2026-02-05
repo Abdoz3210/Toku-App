@@ -10,8 +10,8 @@ class NumberPage extends StatelessWidget {
     Number(
       sound: 'sounds/numbers/number_one_sound.mp3',
       image: 'assets/images/numbers/number_one.png',
-      enText: 'ichi',
-      jpText: 'one',
+      enText: 'One',
+      jpText: 'Ichi',
     ),
     Number(
       sound: 'sounds/numbers/number_one_sound.mp3',
@@ -33,14 +33,12 @@ class NumberPage extends StatelessWidget {
     ),
     Number(
       sound: 'sounds/numbers/number_one_sound.mp3',
-
       image: 'assets/images/numbers/number_five.png',
       jpText: 'Go',
       enText: 'Five',
     ),
     Number(
       sound: 'sounds/numbers/number_one_sound.mp3',
-
       image: 'assets/images/numbers/number_six.png',
       jpText: 'Roku',
       enText: 'Six',
@@ -75,30 +73,6 @@ class NumberPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return ItemsPage(item: number, backgroundColor: Color(0xffEC8724));
   }
-
-  // Scaffold(
-  //       appBar: AppBar(
-  //         title: Text(
-  //           'Numbers',
-  //           style: TextStyle(color: Colors.white, fontSize: 20),
-  //         ),
-
-  //         backgroundColor: Color(0xff412A21),
-  //         foregroundColor: Colors.white,
-  //         leading: IconButton(
-  //           onPressed: () {
-  //             Navigator.pop(context);
-  //           },
-  //           icon: Icon(Icons.arrow_back_ios_new_outlined),
-  //         ),
-  //       ),
-  //       body: ListView.builder(
-  //         itemCount: number.length,
-  //         itemBuilder: (context, index) {
-  //           return NumberCategory(number: number[index]);
-  //         },
-  //       ),
-  //     );
 
   // List<Widget> getList(List<Number> number) {
   //   List<Widget> itemsList = [];
