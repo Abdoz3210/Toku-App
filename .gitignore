@@ -43,3 +43,11 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
+
+
+
+# Old Version code 
+lib/components/family_items.dart
+lib/components/numberss_items.dart
+lib/models/family.dart
+lib/models/numbers.dart

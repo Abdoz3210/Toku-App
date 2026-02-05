@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:toku_app/components/numberss_items.dart';
-import 'package:toku_app/models/numbers.dart';
+import 'package:toku_app/components/items.dart';
+// import 'package:toku_app/components/numberss_items.dart';
+import 'package:toku_app/models/items.dart';
+// import 'package:toku_app/models/numbers.dart';
 
 class NumberPage extends StatelessWidget {
   const NumberPage({super.key});
-  final List<Number> number = const [
+  final List<ItemsModel> number = const [
     Number(
       sound: 'sounds/numbers/number_one_sound.mp3',
       image: 'assets/images/numbers/number_one.png',
@@ -71,30 +73,32 @@ class NumberPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(
-          'Numbers',
-          style: TextStyle(color: Colors.white, fontSize: 20),
-        ),
-
-        backgroundColor: Color(0xff412A21),
-        foregroundColor: Colors.white,
-        leading: IconButton(
-          onPressed: () {
-            Navigator.pop(context);
-          },
-          icon: Icon(Icons.arrow_back_ios_new_outlined),
-        ),
-      ),
-      body: ListView.builder(
-        itemCount: number.length,
-        itemBuilder: (context, index) {
-          return NumberCategory(number: number[index]);
-        },
-      ),
-    );
+    return ItemsPage(item: number, backgroundColor: Color(0xffEC8724));
   }
+
+  // Scaffold(
+  //       appBar: AppBar(
+  //         title: Text(
+  //           'Numbers',
+  //           style: TextStyle(color: Colors.white, fontSize: 20),
+  //         ),
+
+  //         backgroundColor: Color(0xff412A21),
+  //         foregroundColor: Colors.white,
+  //         leading: IconButton(
+  //           onPressed: () {
+  //             Navigator.pop(context);
+  //           },
+  //           icon: Icon(Icons.arrow_back_ios_new_outlined),
+  //         ),
+  //       ),
+  //       body: ListView.builder(
+  //         itemCount: number.length,
+  //         itemBuilder: (context, index) {
+  //           return NumberCategory(number: number[index]);
+  //         },
+  //       ),
+  //     );
 
   // List<Widget> getList(List<Number> number) {
   //   List<Widget> itemsList = [];
