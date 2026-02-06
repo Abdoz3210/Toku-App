@@ -5,13 +5,9 @@ import 'package:toku_app/models/items.dart';
 // import 'package:toku_app/models/numbers.dart';
 
 class Categories extends StatelessWidget {
-  const Categories({
-    super.key,
-    required this.item,
-    required this.backgroundColor,
-  });
-  final ItemsModel? item;
-  final Color? backgroundColor;
+  const Categories({super.key, required this.item, required this.backgroundColor});
+  final ItemsModel item;
+  final Color backgroundColor;
 
   @override
   Widget build(BuildContext context) {
@@ -57,12 +53,12 @@ class Categories extends StatelessWidget {
       color: backgroundColor,
       child: Row(
         children: [
-          if (item!.image != null)
+          if (item.image != null)
             Container(
               height: 100,
               width: 100,
               color: Color(0xfffdf0d8),
-              child: Image.asset(item!.image!),
+              child: Image.asset(item.image!),
             ),
 
           Padding(
@@ -75,11 +71,11 @@ class Categories extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    item!.jpText!,
+                    item.jpText!,
                     style: TextStyle(color: Colors.white, fontSize: 17),
                   ),
                   Text(
-                    item!.enText!,
+                    item.enText!,
                     style: TextStyle(color: Colors.white, fontSize: 15),
                   ),
                 ],
@@ -90,7 +86,8 @@ class Categories extends StatelessWidget {
           IconButton(
             onPressed: () {
               final player = AudioPlayer();
-              player.setSourceAsset(item!.sound!);
+              player.play(AssetSource(item.sound!));
+              // setSourceAsset(item!.sound!);
             },
             icon: Icon(Icons.play_arrow_rounded, color: Colors.white),
           ),
