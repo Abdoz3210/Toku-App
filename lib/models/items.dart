@@ -32,3 +32,13 @@ class ColorsModel extends ItemsModel {
     required super.sound,
   });
 }
+
+
+
+class PhrasesModel extends ItemsModel {
+  const PhrasesModel({
+    required super.jpText,
+    required super.enText,
+    required super.sound,
+  });
+}

@@ -3,6 +3,7 @@ import 'package:toku_app/components/category_items.dart';
 import 'package:toku_app/screens/color_page.dart';
 import 'package:toku_app/screens/family_page.dart';
 import 'package:toku_app/screens/number_page.dart';
+import 'package:toku_app/screens/phrases_page.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -59,7 +60,20 @@ class HomePage extends StatelessWidget {
               );
             },
           ),
-          Category(text: 'Phrases', colors: Color(0xff3998BD)),
+          Category(
+            text: 'Phrases',
+            colors: Color(0xff3998BD),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) {
+                    return PhrasesPage();
+                  },
+                ),
+              );
+            },
+          ),
         ],
       ),
     );
