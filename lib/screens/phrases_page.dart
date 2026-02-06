@@ -54,6 +54,10 @@ class PhrasesPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ItemsPage(item: itemo!, backgroundColor: Color(0xff2e8db2));
+    return ItemsPage(
+      item: itemo!,
+      backgroundColor: Color(0xff2e8db2),
+      pageName: "Phrases",
+    );
   }
 }

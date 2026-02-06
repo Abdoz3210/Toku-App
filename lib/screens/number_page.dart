@@ -71,7 +71,11 @@ class NumberPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ItemsPage(item: number, backgroundColor: Color(0xffEC8724));
+    return ItemsPage(
+      item: number,
+      backgroundColor: Color(0xffEC8724),
+      pageName: "Numbers",
+    );
   }
 
   // List<Widget> getList(List<Number> number) {

@@ -69,6 +69,10 @@ class FamilyPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ItemsPage(item: member, backgroundColor: Color(0xff416c20));
+    return ItemsPage(
+      item: member,
+      backgroundColor: Color(0xff416c20),
+      pageName: "Family Members",
+    );
   }
 }

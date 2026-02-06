@@ -9,16 +9,16 @@ class ItemsPage extends StatelessWidget {
     super.key,
     required this.item,
     required this.backgroundColor,
+    required this.pageName
   });
-  final List<ItemsModel>? item;
-
-
-  final Color? backgroundColor;
+  final List<ItemsModel> item;
+  final Color backgroundColor;
+  final String pageName;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Family Members", style: TextStyle(color: Colors.white)),
+        title: Text(pageName, style: TextStyle(color: Colors.white)),
         backgroundColor: Color(0xff40291e),
         foregroundColor: Colors.white,
         leading: IconButton(
@@ -29,10 +29,10 @@ class ItemsPage extends StatelessWidget {
         ),
       ),
       body: ListView.builder(
-        itemCount: item!.length,
+        itemCount: item.length,
         itemBuilder: (context, index) {
           return Categories(
-            item: item![index],
+            item: item[index],
             backgroundColor: backgroundColor,
           );
         },

@@ -57,6 +57,10 @@ class ColorPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ItemsPage(item: color, backgroundColor: Color(0xff75389a));
+    return ItemsPage(
+      item: color,
+      backgroundColor: Color(0xff75389a),
+      pageName: "Colors",
+    );
   }
 }
